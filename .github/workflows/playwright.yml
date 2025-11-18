@@ -43,9 +43,12 @@ jobs:
       if: always()
       uses: actions/upload-artifact@v4
       with:
-        name: playwright-report
-        path: |
-            allure-report
-            playwright-report
-            test-results
+        name: Playwright-Report
+        path: playwright-report
+
+        name: Allure-Report
+        path: allure-report
+
+        name: Test_Trace&Video
+        path: test-results
         retention-days: 30
