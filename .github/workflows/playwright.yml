@@ -46,9 +46,17 @@ jobs:
         name: Playwright-Report
         path: playwright-report
 
+    - name: Upload Allure report
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
         name: Allure-Report
         path: allure-report
 
+    - name: Upload test-results
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
         name: Test_Trace&Video
         path: test-results
         retention-days: 30
